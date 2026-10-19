@@ -24,7 +24,7 @@ Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qu
 | 4 · Calibração | OK | ✅ |
 | 5 · FAQ | OK | ✅ |
 | 6 · Indicação técnica | Texto → **"Nós analisamos sua aplicação e te indicamos o instrumento adequado"** | ✅ |
-| 6 · Indicação técnica | Nova foto (capacete não amarelo, com 104 BIS na lapela ou SV 971A na mão) | ⏳ aguardando imagem |
+| 6 · Indicação técnica | Nova foto: capacete branco e SV 104 BIS na lapela (sem equipamento na mão) | ✅ |
 
 ### Como trocar as imagens pendentes
 
@@ -34,7 +34,6 @@ As imagens das pastas do Google Drive citadas no documento de ajustes não estav
 |---|---|---|
 | `assets/img/hero-bg.webp` | Fundo do hero (pessoa + equipamentos à direita) | 1920×960 ou maior, área da esquerda livre para o texto |
 | `assets/img/decibelimetro.webp` | Card "Decibelímetro" (SV 971A) | fundo branco, ~700×560 |
-| `assets/img/especialista.webp` | Pessoa da seção do formulário | PNG/WebP com fundo transparente, ~1100×1400 |
 
 ## Animações
 
