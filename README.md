@@ -17,23 +17,18 @@ Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qu
 | Seção | Ajuste | Status |
 |---|---|---|
 | 1 · Hero | Texto "+15 anos" → **"+20 anos de atuação"** | ✅ |
-| 1 · Hero | Trocar equipamentos da imagem (calibrador à direita no lugar do CalPro, trocar BDX2 duplicada por Gilair Plus, proporções reais) | ⏳ aguardando imagem final |
+| 1 · Hero | Equipamentos trocados: Defender 510, BDX II, SV 971, QUESTemp 34 e calibrador SV 34B à direita (CalPro removido, BDX II sem duplicata, proporções reais) | ✅ (falta incluir a GilAir Plus) |
 | 2 · Produtos | Imagem de acessórios exibida **completa** (sem corte) | ✅ |
-| 2 · Produtos | Trocar o decibelímetro Instrutherm pelo **SV 971A** | ⏳ aguardando imagem |
+| 2 · Produtos | Decibelímetro Instrutherm trocado pelo **SV 971A** | ✅ |
 | 3 · Sobre | "15 anos" → **"20 anos"** | ✅ |
 | 4 · Calibração | OK | ✅ |
 | 5 · FAQ | OK | ✅ |
 | 6 · Indicação técnica | Texto → **"Nós analisamos sua aplicação e te indicamos o instrumento adequado"** | ✅ |
 | 6 · Indicação técnica | Imagem do especialista substituída pelo **SV 104 BIS** recortado, flutuando (animação contínua suave) | ✅ |
 
-### Como trocar as imagens pendentes
+### Imagem do banner
 
-As imagens das pastas do Google Drive citadas no documento de ajustes não estavam acessíveis no momento da construção. Quando estiverem prontas, basta substituir os arquivos mantendo o mesmo nome (os pontos estão marcados com `<!-- TROCAR -->` no HTML):
-
-| Arquivo | Uso | Recomendação |
-|---|---|---|
-| `assets/img/hero-bg.webp` | Fundo do hero (pessoa + equipamentos à direita) | 1920×960 ou maior, área da esquerda livre para o texto |
-| `assets/img/decibelimetro.webp` | Card "Decibelímetro" (SV 971A) | fundo branco, ~700×560 |
+`assets/img/hero-bg.webp` é uma composição: a foto original do especialista com os equipamentos antigos removidos, uma bancada escura e os produtos recortados por cima. A GilAir Plus ainda não entrou porque o arquivo não chegou.
 
 ## Animações
 
