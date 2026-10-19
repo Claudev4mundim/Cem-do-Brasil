@@ -17,7 +17,7 @@ Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qu
 | Seção | Ajuste | Status |
 |---|---|---|
 | 1 · Hero | Texto "+15 anos" → **"+20 anos de atuação"** | ✅ |
-| 1 · Hero | Equipamentos trocados: Defender 510, BDX II, SV 971, QUESTemp 34 e calibrador SV 34B à direita (CalPro removido, BDX II sem duplicata, proporções reais) | ✅ (falta incluir a GilAir Plus) |
+| 1 · Hero | Nova imagem com os seis instrumentos: Defender 510, BDX II, SV 971, QUESTemp 34, GilAir Plus e calibrador SV 34B à direita | ✅ |
 | 2 · Produtos | Imagem de acessórios exibida **completa** (sem corte) | ✅ |
 | 2 · Produtos | Decibelímetro Instrutherm trocado pelo **SV 971A** | ✅ |
 | 3 · Sobre | "15 anos" → **"20 anos"** | ✅ |
@@ -28,7 +28,7 @@ Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qu
 
 ### Imagem do banner
 
-`assets/img/hero-bg.webp` é uma composição: a foto original do especialista com os equipamentos antigos removidos, uma bancada escura e os produtos recortados por cima. A GilAir Plus ainda não entrou porque o arquivo não chegou.
+`assets/img/hero-bg.webp` é a imagem final enviada pelo cliente ("Seis instrumentos industriais em destaque"). No CSS ela fica ancorada em `75% center` para manter todos os equipamentos visíveis em telas de notebook.
 
 ## Animações
 
