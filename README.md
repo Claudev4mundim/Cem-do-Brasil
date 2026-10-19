@@ -24,7 +24,7 @@ Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qu
 | 4 · Calibração | OK | ✅ |
 | 5 · FAQ | OK | ✅ |
 | 6 · Indicação técnica | Texto → **"Nós analisamos sua aplicação e te indicamos o instrumento adequado"** | ✅ |
-| 6 · Indicação técnica | Nova foto: capacete branco e SV 104 BIS na lapela (sem equipamento na mão) | ✅ |
+| 6 · Indicação técnica | Imagem do especialista substituída pelo **SV 104 BIS** recortado, flutuando (animação contínua suave) | ✅ |
 
 ### Como trocar as imagens pendentes
 
@@ -37,7 +37,7 @@ As imagens das pastas do Google Drive citadas no documento de ajustes não estav
 
 ## Animações
 
-Somente animações de entrada foram adicionadas (fade/slide/zoom acionados ao entrar na tela via `IntersectionObserver`). Respeitam `prefers-reduced-motion`.
+Animações de entrada (fade/slide/zoom acionados ao entrar na tela via `IntersectionObserver`) e, a pedido do cliente, flutuação contínua do SV 104 BIS na seção de indicação técnica. Tudo respeita `prefers-reduced-motion`.
 
 ## Formulário
 
