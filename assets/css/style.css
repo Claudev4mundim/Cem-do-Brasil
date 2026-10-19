@@ -27,6 +27,7 @@ body {
   overflow-x: hidden;
 }
 img { display: block; max-width: 100%; height: auto; }
+.nowrap { white-space: nowrap; }
 h1, h2, h3, p { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; }
@@ -138,7 +139,9 @@ a { color: inherit; }
   object-fit: cover;
   object-position: 75% center;
 }
-.hero__content { z-index: 1; padding-top: 90px; padding-bottom: 112px; }
+.hero__media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero__content { position: static; padding-top: 90px; padding-bottom: 112px; }
+.hero__content > :not(.hero__media) { position: relative; z-index: 2; }
 .hero__logo { width: 138px; height: auto; margin-left: 8px; }
 .hero__title {
   margin-top: 58px;
@@ -508,14 +511,6 @@ a { color: inherit; }
 @media (max-width: 680px) {
   .title-xl { font-size: 32px; letter-spacing: -.5px; }
   .lead, .sobre__text p, .indicacao__text > p { font-size: 16px; line-height: 26px; }
-  .hero::after { background: linear-gradient(180deg, rgba(15, 18, 24, .78) 0%, rgba(15, 18, 24, .7) 100%); }
-  .hero__content { padding-top: 40px; padding-bottom: 64px; }
-  .hero__logo { width: 110px; }
-  .hero__title { margin-top: 40px; font-size: 32px; line-height: 1.12; }
-  .hero__text { margin-top: 24px; font-size: 16px; line-height: 26px; }
-  .checklist { margin-top: 28px; }
-  .checklist li { font-size: 14px; align-items: flex-start; }
-  .hero .btn { margin-top: 32px; }
   .btn { padding: 0 18px; font-size: 13px; }
   .btn--wide { min-width: 0; width: 100%; }
 
@@ -556,4 +551,66 @@ a { color: inherit; }
 
   .footer__inner { flex-direction: column; justify-content: center; gap: 16px; text-align: center; padding: 32px 16px; }
   .footer img { margin: 0; width: 110px; }
+}
+
+/* =========================================================
+   HERO · MOBILE (logo → foto dos produtos → degradê chumbo → textos)
+   ========================================================= */
+@media (max-width: 767px) {
+  .hero {
+    --chumbo: 27, 31, 37;
+    min-height: 0;
+    background: rgb(var(--chumbo));
+  }
+  .hero::after { content: none; }
+  .hero__content { padding-top: 20px; padding-bottom: 56px; }
+  .hero__logo { width: 96px; margin-left: 0; }
+
+  .hero__media {
+    position: relative;
+    inset: auto;
+    display: block;
+    margin: 2px -16px 0;
+    aspect-ratio: 940 / 841;
+  }
+  .hero__bg { object-position: center; }
+  .hero__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg,
+        rgb(var(--chumbo)) 0%,
+        rgba(var(--chumbo), .8) 8%,
+        rgba(var(--chumbo), .35) 18%,
+        rgba(var(--chumbo), 0) 30%,
+        rgba(var(--chumbo), 0) 62%,
+        rgba(var(--chumbo), .45) 74%,
+        rgba(var(--chumbo), .85) 87%,
+        rgb(var(--chumbo)) 100%),
+      linear-gradient(90deg,
+        rgba(var(--chumbo), .55) 0%,
+        rgba(var(--chumbo), 0) 9%,
+        rgba(var(--chumbo), 0) 91%,
+        rgba(var(--chumbo), .55) 100%);
+  }
+
+  .hero__title {
+    margin-top: -46px;
+    max-width: none;
+    font-size: 29px;
+    line-height: 1.14;
+    letter-spacing: -.3px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .45);
+  }
+  .hero__text { margin-top: 18px; max-width: none; font-size: 15px; line-height: 24px; color: #d9dde3; }
+  .checklist { margin-top: 24px; gap: 12px; }
+  .checklist li { font-size: 14px; line-height: 21px; align-items: flex-start; }
+  .checklist .hex--sm { margin-top: -1px; }
+  .hero .btn { margin-top: 28px; width: 100%; min-height: 54px; justify-content: center; }
+}
+
+@media (max-width: 380px) {
+  .hero__title { font-size: 26px; }
 }

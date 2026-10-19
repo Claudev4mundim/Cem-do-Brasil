@@ -8,22 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/hero-bg.webp">
+  <link rel="preload" as="image" href="assets/img/hero-bg.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/img/hero-mobile.webp" media="(max-width: 767px)">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <!-- ============ SEÇÃO 1 · HERO ============ -->
   <header class="hero">
-    <img class="hero__bg" src="assets/img/hero-bg.webp" alt="" aria-hidden="true" fetchpriority="high">
     <div class="container hero__content">
       <img class="hero__logo reveal" data-anim="fade-down" src="assets/img/logo-cem.webp" alt="CEM Instrumentos" width="138" height="92">
+      <picture class="hero__media" aria-hidden="true">
+        <source media="(max-width: 767px)" srcset="assets/img/hero-mobile.webp" width="940" height="841">
+        <img class="hero__bg" src="assets/img/hero-bg.webp" alt="" width="1672" height="941" fetchpriority="high">
+      </picture>
       <h1 class="hero__title reveal" data-anim="fade-up">Equipamentos para medição de ruído com indicação técnica para a sua norma e suporte pós-venda garantido</h1>
-      <p class="hero__text reveal" data-anim="fade-up" style="--d:.1s">Sonômetros, dosímetros, calibradores acústicos, microfones e acessórios para profissionais de SST, consultorias e indústrias que precisam estar em conformidade com NR-15, NHO-01 e NBR 10151.</p>
+      <p class="hero__text reveal" data-anim="fade-up" style="--d:.1s">Sonômetros, dosímetros, calibradores acústicos, microfones e acessórios para profissionais de SST, consultorias e indústrias que precisam estar em conformidade com <span class="nowrap">NR-15</span>, <span class="nowrap">NHO-01</span> e <span class="nowrap">NBR 10151</span>.</p>
       <ul class="checklist">
-        <li class="reveal" data-anim="fade-right" style="--d:.2s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span>+20 anos de atuação no mercado nacional</li>
-        <li class="reveal" data-anim="fade-right" style="--d:.3s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span>Equipamentos para NR-15, NHO-01 e NBR 10151</li>
-        <li class="reveal" data-anim="fade-right" style="--d:.4s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span>Indicação técnica gratuita para a sua aplicação</li>
+        <li class="reveal" data-anim="fade-right" style="--d:.2s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span><span>+20 anos de atuação no mercado nacional</span></li>
+        <li class="reveal" data-anim="fade-right" style="--d:.3s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span><span>Equipamentos para <span class="nowrap">NR-15</span>, <span class="nowrap">NHO-01</span> e <span class="nowrap">NBR 10151</span></span></li>
+        <li class="reveal" data-anim="fade-right" style="--d:.4s"><span class="hex hex--sm hex--yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span><span>Indicação técnica gratuita para a sua aplicação</span></li>
       </ul>
       <a href="#indicacao" class="btn btn--yellow reveal" data-anim="fade-up" style="--d:.5s">Receber indicação técnica <svg class="arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
