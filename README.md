@@ -10,7 +10,28 @@ assets/
   img/            # imagens extraídas do PDF (webp)
 ```
 
-Para visualizar, basta abrir `index.html` no navegador ou publicar a pasta em qualquer hospedagem estática (Vercel, Netlify etc.).
+Para visualizar, basta abrir `index.html` no navegador.
+
+## Publicação
+
+Desde 24/11/2026 a página está na Cloudflare Pages, projeto `cemdobrasil`, em https://cemdobrasil.pages.dev. Antes
+ficava na Vercel (time claudev4mundim, projeto `cemdobrasil`, https://cemdobrasil.vercel.app).
+
+| Campo (Settings → Build) | Valor |
+|---|---|
+| Framework preset | None |
+| Build command | `bash cloudflare/build.sh` |
+| Build output directory | `dist` |
+| Production branch | `claude/magical-cannon-vp0848` (a branch padrão deste repositório) |
+
+Cada commit na branch padrão publica a página. Outra branch vira prévia pública em `<branch>.cemdobrasil.pages.dev`.
+
+O [`cloudflare/build.sh`](cloudflare/build.sh) copia `index.html` e `assets/` para `dist/`, sem o README e
+`cloudflare/`, e junta [`cloudflare/404.html`](cloudflare/404.html). Sem ela, a Cloudflare responde 200 com o
+`index.html` em endereço que não existe.
+
+Para usar um domínio próprio (por exemplo, `lp.cemdobrasil.com.br`): criar no DNS do domínio um CNAME desse nome para
+`cemdobrasil.pages.dev` e adicionar o nome em Custom domains do projeto na Cloudflare.
 
 ## Ajustes aplicados
 
