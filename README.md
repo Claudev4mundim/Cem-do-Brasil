@@ -14,8 +14,15 @@ Para visualizar, basta abrir `index.html` no navegador.
 
 ## Publicação
 
-Desde 24/11/2026 a página está na Cloudflare Pages, projeto `cemdobrasil`, em https://cemdobrasil.pages.dev. Antes
-ficava na Vercel (time claudev4mundim, projeto `cemdobrasil`, https://cemdobrasil.vercel.app).
+Desde 24/11/2026 a página está na Cloudflare Pages, projeto `cemdobrasil`. Antes ficava na Vercel (time
+claudev4mundim, projeto `cemdobrasil`, https://cemdobrasil.vercel.app).
+
+| Endereço | Como chega |
+|---|---|
+| https://lp.ceminstrumentos.com.br | CNAME `lp` → `cemdobrasil.pages.dev` no DNS da HostGator; certificado emitido pela Cloudflare |
+| https://cemdobrasil.pages.dev | endereço da Cloudflare, sempre ativo |
+
+O site principal (`ceminstrumentos.com.br`) e o e-mail continuam na HostGator e não dependem deste repositório.
 
 | Campo (Settings → Build) | Valor |
 |---|---|
@@ -30,8 +37,8 @@ O [`cloudflare/build.sh`](cloudflare/build.sh) copia `index.html` e `assets/` pa
 `cloudflare/`, e junta [`cloudflare/404.html`](cloudflare/404.html). Sem ela, a Cloudflare responde 200 com o
 `index.html` em endereço que não existe.
 
-Para usar um domínio próprio (por exemplo, `lp.cemdobrasil.com.br`): criar no DNS do domínio um CNAME desse nome para
-`cemdobrasil.pages.dev` e adicionar o nome em Custom domains do projeto na Cloudflare.
+Para ligar outro domínio: criar no DNS um CNAME desse nome para `cemdobrasil.pages.dev` e adicionar o nome em Custom
+domains do projeto na Cloudflare.
 
 ## Ajustes aplicados
 
